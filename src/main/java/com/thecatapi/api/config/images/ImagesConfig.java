@@ -1,0 +1,42 @@
+package com.thecatapi.api.config.images;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.thecatapi.api.exceptions.TAFRuntimeException;
+import com.thecatapi.api.models.responses.image.OwnedImageResponseDto;
+import lombok.Data;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
+import static com.thecatapi.api.utils.StreamUtils.randomItem;
+import static java.util.Arrays.asList;
+
+@Data
+public class ImagesConfig {
+
+    private List<OwnedImageResponseDto> images;
+
+    public ImagesConfig() {
+        try {
+            var mapper = new ObjectMapper()
+                    .registerModule(new JavaTimeModule())
+                    .configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+            images = asList(mapper.readValue(
+                    new File("src/main/resources/static_config/images.json"),
+                    OwnedImageResponseDto[].class
+            ));
+        } catch (IOException e) {
+            throw new TAFRuntimeException("Can not read file with images", e);
+        }
+    }
+
+    public OwnedImageResponseDto getRandomImage() {
+        return images
+                .stream()
+                .collect(randomItem());
+    }
+}

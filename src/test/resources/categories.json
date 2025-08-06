@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Automation bug",
+    "matchedStatuses": [
+      "broken",
+      "failed"
+    ],
+    "traceRegex": ".*(TAFRuntimeException|ImageProcessingException).*"
+  },
+  {
+    "name": "To investigate",
+    "matchedStatuses": [
+      "broken",
+      "failed"
+    ],
+    "traceRegex": ".*EnvironmentException.*"
+  },
+  {
+    "name": "Skipped tests",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Passed tests",
+    "matchedStatuses": [
+      "passed"
+    ]
+  },
+  {
+    "name": "Failed tests",
+    "matchedStatuses": [
+      "broken",
+      "failed"
+    ],
+    "traceRegex": ".*HttpException.*"
+  }
+]

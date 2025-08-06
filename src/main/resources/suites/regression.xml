@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression run">
+
+    <test name="Image tests">
+        <packages>
+            <package name="com.thecatapi.api.systemtests.images.*"/>
+        </packages>
+    </test>
+
+</suite>
