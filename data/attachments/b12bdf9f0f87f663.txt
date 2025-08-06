@@ -1,0 +1,2 @@
+Response Status Code: 401
+Response Body: AUTHENTICATION_ERROR - you need to send your API Key as the 'x-api-key' header

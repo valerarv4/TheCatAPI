@@ -1,0 +1,5 @@
+Request URI: https://api.thecatapi.com/v1/images/nQ0fYPbVhB
+Request Method: DELETE
+Request Headers: x-api-key=live_utRB76B8Z00RXz4rS0M09nyzvUEGICA7fL0U3GfVzVXxc2mEtU9g8FjwWCrlycT3
+Accept=*/*
+Request Body: null

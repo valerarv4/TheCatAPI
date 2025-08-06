@@ -1,0 +1,2 @@
+Response Status Code: 201
+Response Body: {"id":"y3eN9KYtvV","url":"https://cdn2.thecatapi.com/images/y3eN9KYtvV.jpg","sub_id":"Napoleon","width":1920,"height":1280,"original_filename":"large.jpeg","pending":0,"approved":1}

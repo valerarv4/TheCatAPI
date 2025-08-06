@@ -1,0 +1,4 @@
+Request URI: https://api.thecatapi.com/v1/images/i8Wdf_Uai
+Request Method: DELETE
+Request Headers: Accept=*/*
+Request Body: null

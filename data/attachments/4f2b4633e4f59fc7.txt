@@ -1,0 +1,2 @@
+Response Status Code: 201
+Response Body: {"id":"qHY8jfH7I","url":"https://cdn2.thecatapi.com/images/qHY8jfH7I.jpg","width":510,"height":510,"original_filename":"medium.jpeg","pending":0,"approved":1}

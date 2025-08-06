@@ -1,0 +1,2 @@
+Response Status Code: 201
+Response Body: {"id":"r4P-eZxQ8","url":"https://cdn2.thecatapi.com/images/r4P-eZxQ8.jpg","width":1920,"height":1280,"original_filename":"large.jpeg","breed_ids":"Ojos Azules","pending":0,"approved":1}

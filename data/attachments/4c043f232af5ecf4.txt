@@ -1,0 +1,2 @@
+Response Status Code: 400
+Response Body: AUTHENTICATION_ERROR - the header "x-api-key" is invalid, check it then try again

@@ -1,0 +1,2 @@
+Response Status Code: 201
+Response Body: {"id":"-f6t-usNa","url":"https://cdn2.thecatapi.com/images/-f6t-usNa.jpg","sub_id":"German Rex","width":256,"height":256,"original_filename":"small.jpeg","breed_ids":"tang","pending":0,"approved":1}

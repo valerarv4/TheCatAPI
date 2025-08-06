@@ -1,0 +1,4 @@
+Request URI: https://api.thecatapi.com/v1/images?limit=100&page=0&order=ASC
+Request Method: GET
+Request Headers: Accept=*/*
+Request Body: null

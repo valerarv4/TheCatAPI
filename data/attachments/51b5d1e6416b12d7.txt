@@ -1,0 +1,2 @@
+Response Status Code: 201
+Response Body: {"id":"nQ0fYPbVhB","url":"https://cdn2.thecatapi.com/images/nQ0fYPbVhB.jpg","width":256,"height":256,"original_filename":"small.jpeg","breed_ids":"toyg","pending":0,"approved":1}

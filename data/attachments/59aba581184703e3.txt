@@ -1,0 +1,5 @@
+Request URI: https://api.thecatapi.com/v1/images/upload
+Request Method: POST
+Request Headers: Accept=*/*
+Content-Type=multipart/form-data
+Request Body: null
