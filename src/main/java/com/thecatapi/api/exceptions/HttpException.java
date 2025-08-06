@@ -1,6 +1,6 @@
 package com.thecatapi.api.exceptions;
 
-public class HttpException extends RuntimeException {
+public class HttpException extends AssertionError {
 
     public HttpException(String errorMessage) {
         super(errorMessage);
