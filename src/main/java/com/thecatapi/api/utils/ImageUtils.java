@@ -1,12 +1,14 @@
 package com.thecatapi.api.utils;
 
 import com.thecatapi.api.exceptions.ImageProcessingException;
+import lombok.experimental.UtilityClass;
 
 import java.io.File;
 import java.io.IOException;
 
 import static javax.imageio.ImageIO.read;
 
+@UtilityClass
 public class ImageUtils {
 
     public static File getSmallImage() {

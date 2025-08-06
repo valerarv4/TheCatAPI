@@ -6,7 +6,6 @@ import com.thecatapi.api.models.responses.image.UploadedImageResponseDto;
 import com.thecatapi.api.systemtests.images.AbstractImageTest;
 import com.thecatapi.api.utils.annotations.ApiVersion;
 import com.thecatapi.api.utils.annotations.epics.ImageEpic;
-import io.qameta.allure.Allure;
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
@@ -14,6 +13,7 @@ import org.testng.annotations.Test;
 
 import java.time.format.DateTimeFormatter;
 
+import static com.thecatapi.api.utils.AllureUtils.allureAttachTestDescription;
 import static com.thecatapi.api.utils.DateTimeUtils.stringToLocalDateTime;
 import static com.thecatapi.api.utils.ImageUtils.*;
 import static com.thecatapi.api.utils.RandomUtils.getRandomCatSubId;
@@ -31,7 +31,7 @@ public class UploadNewImagePositiveTests extends AbstractImageTest {
     @ApiVersion(1)
     @Test(dataProvider = "imageDataProvider")
     public void verifyUploadNewImageTest(String description, ImageRequestDto imageRequestDto) {
-        Allure.description(description);
+        allureAttachTestDescription(description);
 
         var uploadedImageResponseDto = imageController
                 .uploadImage(xApiKey, imageRequestDto, SC_CREATED)

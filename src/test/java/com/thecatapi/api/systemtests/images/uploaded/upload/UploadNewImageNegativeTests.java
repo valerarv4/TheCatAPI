@@ -7,10 +7,10 @@ import com.thecatapi.api.utils.annotations.epics.ImageEpic;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import static com.thecatapi.api.utils.AllureUtils.allureAttachTestDescription;
 import static com.thecatapi.api.utils.ImageUtils.getLargeImage;
 import static com.thecatapi.api.utils.RandomUtils.getRandomCatSubId;
 import static com.thecatapi.api.utils.ResponseErrorMessages.INVALID_DATA;
-import static io.qameta.allure.Allure.description;
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,7 +21,7 @@ public class UploadNewImageNegativeTests extends AbstractImageTest {
     @Test(dataProvider = "negativeUploadImageDataProvider")
     public void verifyUploadNewImageNegativeTest(String description, ImageRequestDto imageRequestDto,
                                                  int statusCode, String expectedResponseErrorMessage) {
-        description(description);
+        allureAttachTestDescription(description);
 
         var actualResponseErrorMessage = imageController
                 .uploadImage(xApiKey, imageRequestDto, statusCode)

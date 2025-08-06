@@ -1,6 +1,5 @@
 package com.thecatapi.api.utils.loggers;
 
-import io.qameta.allure.Allure;
 import io.restassured.filter.Filter;
 import io.restassured.response.Response;
 import io.restassured.specification.FilterableRequestSpecification;
@@ -8,6 +7,8 @@ import io.restassured.specification.FilterableResponseSpecification;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import static com.thecatapi.api.utils.AllureUtils.allureAttachText;
 
 public class CustomResponseLoggingFilter implements Filter {
 
@@ -23,7 +24,7 @@ public class CustomResponseLoggingFilter implements Filter {
         responsePrintStream.println("Response Status Code: " + response.getStatusCode());
         responsePrintStream.println("Response Body: " + response.getBody().asString());
 
-        Allure.addAttachment("Response Logs", "text/plain", responseOutputStream.toString());
+        allureAttachText("Response Logs", responseOutputStream.toString());
 
         return response;
     }
